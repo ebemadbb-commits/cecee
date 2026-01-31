@@ -1,0 +1,27 @@
+getElementById("effects").appendChild(e);
+    setTimeout(()=>e.remove(),7000);
+  },200);
+}
+
+function show(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function noLove(){
+  show("pageNo");
+  startEffects(["💔","😔"]);
+}
+
+function yesLove(){
+  show("pageYes");
+  startEffects(["❤️"]);
+  setTimeout(()=>{
+    show("pageFinal");
+    startEffects(["❤️"]);
+  },20000);
+}
+</script>
+
+</body>
+</html>
